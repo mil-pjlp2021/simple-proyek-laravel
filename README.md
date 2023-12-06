@@ -47,7 +47,7 @@ $ php artisan serve
 
 Generated User
 ```sh
-username = `admin@example.com`
-password = `password`
+`username` = admin@example.com
+`password` = password
 
 ```
