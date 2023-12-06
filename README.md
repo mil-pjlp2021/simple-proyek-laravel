@@ -4,7 +4,7 @@ Proses instalasi sebagai berikut
 
 ```sh
 $ git clone https://github.com/mil-pjlp2021/simple-proyek-laravel.git
-$ cd membership-access
+$ cd simple-proyek-laravel
 $ composer update
 ```
 
@@ -30,9 +30,9 @@ DB_PASSWORD=
 
 
 
-`migrate --seed` untuk membuat tabel dan mengisi data
+`migrate` untuk membuat tabel dan data user
 ```sh
-$ php artisan migrate --seed
+$ php artisan migrate
 ```
 `npm run build` untuk men-generate frontend
 ```sh
