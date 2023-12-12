@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\KlienController;
 use App\Http\Controllers\PekerjaanController;
+use App\Http\Controllers\ProyekController;
 use App\Http\Controllers\TipePekerjaanController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -55,4 +56,12 @@ Route::middleware([
         Route::get('pekerjaan/edit/{id}', [PekerjaanController::class,'edit'])->name('pekerjaan.edit');
         Route::put('pekerjaan/edit/{id}', [PekerjaanController::class,'update'])->name('pekerjaan.update');
         Route::delete('pekerjaan/{id}', [PekerjaanController::class,'destroy'])->name('pekerjaan.destroy');
+
+        Route::get('proyek', [ProyekController::class,'index'])->name('proyek.index');
+        Route::get('proyek/show/{id}', [ProyekController::class,'show'])->name('proyek.show');
+        Route::get('proyek/create', [ProyekController::class,'create'])->name('proyek.create');
+        Route::post('proyek/create', [ProyekController::class,'store'])->name('proyek.store');
+        Route::get('proyek/edit/{id}', [ProyekController::class,'edit'])->name('proyek.edit');
+        Route::put('proyek/edit/{id}', [ProyekController::class,'update'])->name('proyek.update');
+        Route::delete('proyek/{id}', [ProyekController::class,'destroy'])->name('proyek.destroy');
 });

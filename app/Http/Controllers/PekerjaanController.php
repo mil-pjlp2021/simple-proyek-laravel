@@ -95,6 +95,10 @@ class PekerjaanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = $this->pekerjaanRepository->findByID($id);
+
+        if ($data->delete()) {
+            return redirect()->route('pekerjaan.index')->banner('Berhasil menghapus pekerjaan');
+        }
     }
 }

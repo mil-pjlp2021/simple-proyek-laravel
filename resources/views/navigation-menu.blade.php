@@ -27,13 +27,18 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('tipe_pekerjaan.index') }}" :active="request()->routeIs('tipe_pekerjaan*')">
-                        {{ __('Tipe Pekerjaan') }}
+                    <x-nav-link href="{{ route('pekerjaan.index') }}" :active="request()->routeIs('pekerjaan*')">
+                        {{ __('Pekerjaan') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('pekerjaan.index') }}" :active="request()->routeIs('pekerjaan*')">
-                        {{ __('Pekerjaan') }}
+                    <x-nav-link href="{{ route('proyek.index') }}" :active="request()->routeIs('proyek*')">
+                        {{ __('Proyek') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('tipe_pekerjaan.index') }}" :active="request()->routeIs('tipe_pekerjaan*')">
+                        {{ __('Tipe Pekerjaan') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -171,6 +176,16 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="{{ route('klien.index') }}" :active="request()->routeIs('klien*')">
                 {{ __('Klien') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('pekerjaan.index') }}" :active="request()->routeIs('pekerjaan*')">
+                {{ __('Pekerjaan') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('proyek.index') }}" :active="request()->routeIs('proyek*')">
+                {{ __('Proyek') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
